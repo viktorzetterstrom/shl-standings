@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     shlService.standings()
-      .then(console.log)
+      .then(setStandings)
       .catch(err => console.error(`Error fetching standings: ${err}`));
   }, []);
 
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       {
         !standings.loading
-          ? standings.data.map(team => <div>These pretzels are making me thirsty</div>)
+          ? standings.data.map((team, i) => <div key={i}>{team.team.code}</div>)
           : <div>spinner</div>
       }
     </div>
