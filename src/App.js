@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import shlService from './shl-service';
 import LeagueTable from './components/LeagueTable';
+import Spinner from './components/Spinner';
 
 function App() {
   const [standings, setStandings] = useState({ loading: true })
@@ -17,7 +18,7 @@ function App() {
       {
         !standings.loading
           ? <LeagueTable standings={ standings }/>
-          : <div>spinner</div>
+          : <Spinner />
       }
     </div>
   );
