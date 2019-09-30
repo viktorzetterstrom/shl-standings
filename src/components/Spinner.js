@@ -9,7 +9,7 @@ const rotate = keyframes`
 const SpinnerContainer = styled.div`
   position: relative;
   width: 140px;
-  margin: 140px auto;
+  margin: 20px auto;
 `;
 
 const SpinnerPart = styled.div`
