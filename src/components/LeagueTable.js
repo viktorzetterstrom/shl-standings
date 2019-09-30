@@ -7,7 +7,7 @@ export default function LeagueTable({ standings }) {
       <LeagueTableHead />
       <tbody>
         {
-          standings.map((team, i) => <LeagueTableRow key={i} data={team} />)
+          standings.map((team, i) => <LeagueTableRow key={i} team={team} />)
         }
       </tbody>
     </table>
@@ -20,18 +20,20 @@ function LeagueTableHead() {
       <tr>
         <th></th>
         <th>Lag</th>
+        <th>+/-</th>
         <th>Poäng</th>
       </tr>
     </thead>
   );
 }
 
-function LeagueTableRow({ data }) {
+function LeagueTableRow({ team }) {
   return (
     <tr>
-      <td><img src={data.logo} alt={`${data.name} logotyp`} /></td>
-      <td>{data.name}</td>
-      <td>{data.points}</td>
+      <td><img src={team.logo} alt={`${team.name} logotyp`} /></td>
+      <td>{team.name}</td>
+      <td>{team.diff}</td>
+      <td>{team.points}</td>
     </tr>
   )
 }
