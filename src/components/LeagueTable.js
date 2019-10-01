@@ -7,6 +7,7 @@ function LeagueTableHead() {
       <tr>
         <th></th>
         <th>Lag</th>
+        <th>GP</th>
         <th>+/-</th>
         <th>Poäng</th>
       </tr>
@@ -19,6 +20,7 @@ function LeagueTableRow({ team }) {
     <tr>
       <td><img src={team.logo} alt={`${team.name} logotyp`} /></td>
       <td>{team.name}</td>
+      <td>{team.gp}</td>
       <td>{team.diff}</td>
       <td>{team.points}</td>
     </tr>
@@ -28,7 +30,7 @@ function LeagueTableRow({ team }) {
 const LeagueTableContainer = styled.table`
   color: ${ props => props.primary };
   background-color: ${ props => props.secondary };
-  margin: 10px auto;
+  margin: 20px auto;
   width: 95%;
   min-width: 320px;
   max-width: 600px;
