@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import shlService from './shl-service';
-import { lightTheme, darkTheme } from './style/theme';
+import { lightTheme } from './style/theme';
 import Header from './components/Header';
 import Spinner from './components/Spinner';
 import LeagueTable from './components/LeagueTable';
@@ -40,7 +40,7 @@ function App() {
       {
         !standings.loading
           ? <LeagueTable standings={ standings } theme={ activeTheme } />
-          : <Spinner />
+          : <Spinner theme={ activeTheme }/>
         }
         <Footer />
     </AppContainer>

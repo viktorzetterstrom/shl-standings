@@ -1,6 +1,6 @@
 
 const light = 'white';
-const dark = '#151515';
+const dark = '#404040';
 
 export const lightTheme = {
   primary: dark,
