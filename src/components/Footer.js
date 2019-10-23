@@ -20,7 +20,7 @@ const FooterWrapper = styled.div`
 export default function Footer({ theme }) {
   return (
     <FooterWrapper {...theme}>
-      Made by <a href="https://www.zetterstrom.dev" rel="noopener noreferrer" target="_blank">zetterstrom.dev</a>, data provided by the <a href="http://doc.openapi.shl.se/#/statistics/getTeamsStandings" rel="noopener noreferrer" target="_blank">open SHL api.</a>
+      Data provided by the <a href="http://doc.openapi.shl.se/#/statistics/getTeamsStandings" rel="noopener noreferrer" target="_blank">open SHL api.</a>
     </FooterWrapper>
   );
 }
