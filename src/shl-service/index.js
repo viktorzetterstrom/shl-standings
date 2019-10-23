@@ -1,6 +1,6 @@
 
 const shlService = {
-  standings: () => fetch('/standings').then(res => res.json()),
+  standings: () => fetch('https://api.zetterstrom.dev/standings').then(res => res.json()),
 }
 
 export default shlService;
