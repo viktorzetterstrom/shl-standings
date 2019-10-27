@@ -11,7 +11,7 @@ import AppContainer from './components/AppContainer';
 import Header from './components/Header';
 import Spinner from './components/Spinner';
 import StandingsTable from './components/StandingsTable';
-import Games from './components/Games';
+import Games from './components/GamesTable';
 import Footer from './components/Footer';
 
 const activeTheme = lightTheme;
