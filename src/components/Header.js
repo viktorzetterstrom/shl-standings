@@ -1,5 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+
+const HeaderLink = styled(NavLink)`
+  :active {
+    color: hotpink;
+  }
+`;
 
 const HeaderWrapper = styled.div`
   color: ${ props => props.secondary };
@@ -12,7 +19,8 @@ const HeaderWrapper = styled.div`
 export default function Headers({ theme }) {
   return (
     <HeaderWrapper {...theme}>
-      SHL 2019
+      <HeaderLink to="/standings">Standings</HeaderLink>
+      <HeaderLink to="/games">Games</HeaderLink>
     </HeaderWrapper>
   );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
+import TeamLogo from './TeamLogo';
 import styled from 'styled-components';
 
-function LeagueTableHead() {
+function StandingsTableHead() {
   return (
     <thead>
       <tr>
@@ -15,10 +16,10 @@ function LeagueTableHead() {
   );
 }
 
-function LeagueTableRow({ team }) {
+function StandingsTableRow({ team }) {
   return (
     <tr>
-      <td><img src={team.logo} alt={`${team.name} logotyp`} /></td>
+      <td><TeamLogo src={team.logo} name={team.name} /></td>
       <td>{team.name}</td>
       <td>{team.gp}</td>
       <td>{team.diff}</td>
@@ -27,7 +28,7 @@ function LeagueTableRow({ team }) {
   )
 }
 
-const LeagueTableContainer = styled.table`
+const StandingsTableContainer = styled.table`
   color: ${ props => props.primary };
   background-color: ${ props => props.secondary };
   margin: 20px auto 30px;
@@ -36,15 +37,15 @@ const LeagueTableContainer = styled.table`
   max-width: 600px;
 `;
 
-export default function LeagueTable({ standings, theme }) {
+export default function StandingsTable({ standings, theme }) {
   return (
-    <LeagueTableContainer {...theme}>
-      <LeagueTableHead />
+    <StandingsTableContainer {...theme}>
+      <StandingsTableHead />
       <tbody>
         {
-          standings.map((team, i) => <LeagueTableRow key={i} team={team} theme={theme} />)
+          standings.map((team, i) => <StandingsTableRow key={i} team={team} theme={theme} />)
         }
       </tbody>
-    </LeagueTableContainer>
+    </StandingsTableContainer>
   )
 }
