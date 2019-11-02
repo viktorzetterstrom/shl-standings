@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import shlService from '../shl-service';
 import TeamLogo from './TeamLogo';
 import TableContainer from './TableContainer';
+import Spinner from './Spinner';
 
 const GamesTableHead = () => (
   <thead>
@@ -30,7 +32,7 @@ const GamesTableRow = ({ game }) => (
   </tr>
 );
 
-export default ({ games, theme }) => (
+const GamesTable = ({ games, theme }) => (
   <TableContainer {...theme}>
     <GamesTableHead />
     <tbody>
@@ -40,3 +42,16 @@ export default ({ games, theme }) => (
     </tbody>
   </TableContainer>
 );
+
+export default ({ theme }) => {
+  const [games, setGames] = useState({ loading: true });
+  useEffect(() => {
+    shlService.games()
+      .then(res => setGames(res.data))
+      .catch(err => console.error(`Error fetching games: ${err}`));
+  }, []);
+
+  return !games.loading
+    ? <GamesTable games={ games } theme={ theme } />
+    : <Spinner theme={ theme }/>
+}
