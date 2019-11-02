@@ -4,9 +4,10 @@ React app that displays the current SHL-standings, utilizing the open SHL api. I
 
 Currently the app displays the current SHL standings, current features are in the pipeline:
 
-- Tab for top scorers
-- Tab for top goalies
-- Tab for team win-streaks
-- Tab for win/lose-ratios last 3, 5, 7 games
+- Top scorers
+- Top goalies
+- Team win-streaks
+- Win/lose-ratios last 3, 5, 7 games
+- Results between teams
 
 Everything is up and running on [shl.zetterstrom.dev](https://shl.zetterstrom.dev).
