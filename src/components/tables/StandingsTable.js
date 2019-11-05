@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import shlService from '../shl-service';
-import TeamLogo from './TeamLogo';
-import TableContainer from './TableContainer';
-import Spinner from './Spinner';
+import shlService from '../../shl-service';
+import TeamLogo from '../TeamLogo';
+import TableContainer from '../TableContainer';
+import Spinner from '../Spinner';
 
 const StandingsTableHead = () => (
     <thead>

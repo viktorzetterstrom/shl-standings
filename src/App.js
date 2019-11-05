@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import AppContainer from './components/AppContainer';
 import Header from './components/Header';
-import StandingsTable from './components/StandingsTable';
-import GamesTable from './components/GamesTable';
+import StandingsTable from './components/tables/StandingsTable';
+import GamesTable from './components/tables/GamesTable';
 import Footer from './components/Footer';
 
 const activeTheme = lightTheme;
@@ -30,7 +30,7 @@ function App() {
 
           </Route>
           <Route path="/statistics/goalies">
-            
+
           </Route>
           <Route path="/statistics">
             <Redirect to="/statistics/players" />
