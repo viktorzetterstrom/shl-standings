@@ -22,13 +22,13 @@ function App() {
       <Header theme={ activeTheme } />
         <Switch>
           <Route path="/standings">
-            <StandingsTable />
+            <StandingsTable theme={ activeTheme } />
           </Route>
           <Route path="/games">
-            <GamesTable />
+            <GamesTable theme={ activeTheme } />
           </Route>
           <Route path="/statistics/goalies">
-            <GoaliesTable />
+            <GoaliesTable theme={ activeTheme } />
           </Route>
           <Route path="/statistics/players">
 
