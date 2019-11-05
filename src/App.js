@@ -10,6 +10,7 @@ import AppContainer from './components/AppContainer';
 import Header from './components/Header';
 import StandingsTable from './components/tables/StandingsTable';
 import GamesTable from './components/tables/GamesTable';
+import GoaliesTable from './components/tables/GoaliesTable';
 import Footer from './components/Footer';
 
 const activeTheme = lightTheme;
@@ -26,14 +27,14 @@ function App() {
           <Route path="/games">
             <GamesTable />
           </Route>
+          <Route path="/statistics/goalies">
+            <GoaliesTable />
+          </Route>
           <Route path="/statistics/players">
 
           </Route>
-          <Route path="/statistics/goalies">
-
-          </Route>
           <Route path="/statistics">
-            <Redirect to="/statistics/players" />
+            <Redirect to="/statistics/goalies" />
           </Route>
           <Route path="/">
             <Redirect to="/standings" />
