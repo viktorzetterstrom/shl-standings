@@ -26,6 +26,15 @@ function App() {
           <Route path="/games">
             <GamesTable />
           </Route>
+          <Route path="/statistics/players">
+
+          </Route>
+          <Route path="/statistics/goalies">
+            
+          </Route>
+          <Route path="/statistics">
+            <Redirect to="/statistics/players" />
+          </Route>
           <Route path="/">
             <Redirect to="/standings" />
           </Route>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 
 const HeaderLink = styled(NavLink)`
   color: ${ props => props.secondary };
@@ -35,7 +35,14 @@ export default function Headers({ theme }) {
       <HeaderWrapper {...theme}>
         <HeaderLink {...theme} to="/standings">Standings</HeaderLink>
         <HeaderLink {...theme} to="/games">Games</HeaderLink>
+        <HeaderLink {...theme} to="/statistics">Stats</HeaderLink>
       </HeaderWrapper>
+      <Route path="/statistics">
+        <HeaderWrapper {...theme}>
+          <HeaderLink {...theme} to="/statistics/players">Players</HeaderLink>
+          <HeaderLink {...theme} to="/statistics/goalies">Goalies</HeaderLink>
+        </HeaderWrapper>
+      </Route>
     </>
   );
 }
