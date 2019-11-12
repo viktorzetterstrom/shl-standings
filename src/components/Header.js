@@ -41,6 +41,7 @@ export default function Headers({ theme }) {
         <HeaderWrapper {...theme}>
           <HeaderLink {...theme} to="/statistics/goalies">Goalies</HeaderLink>
           <HeaderLink {...theme} to="/statistics/players">Players</HeaderLink>
+          <HeaderLink {...theme} to="/statistics/winstreaks">Winstreaks</HeaderLink>
         </HeaderWrapper>
       </Route>
     </>

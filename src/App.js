@@ -12,6 +12,7 @@ import StandingsTable from './components/tables/StandingsTable';
 import GamesTable from './components/tables/GamesTable';
 import GoaliesTable from './components/tables/GoaliesTable';
 import PlayersTable from './components/tables/PlayersTable';
+import WinstreaksTable from './components/tables/WinstreaksTable';
 import Footer from './components/Footer';
 
 const activeTheme = lightTheme;
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/statistics/players">
             <PlayersTable theme={ activeTheme } />
+          </Route>
+          <Route path="/statistics/winstreaks">
+            <WinstreaksTable theme={ activeTheme } />
           </Route>
           <Route path="/statistics">
             <Redirect to="/statistics/goalies" />

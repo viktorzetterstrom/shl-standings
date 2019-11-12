@@ -6,7 +6,7 @@ export default styled.div`
   background-color: ${ props => props.secondary };
   margin: 0 auto;
   text-align: center;
-  min-height: 400px;
+  min-height: 450px;
   overflow: hidden;
   @media (min-width: 610px) {
     width: 600px;
