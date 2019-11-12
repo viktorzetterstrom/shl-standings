@@ -10,12 +10,12 @@ const GoaliesTableHead = () => (
         <th></th>
         <th>Nr</th>
         <th>Name</th>
-        <th>gp</th>
-        <th>w</th>
-        <th>t</th>
-        <th>l</th>
-        <th>gaa</th>
-        <th>svs%</th>
+        <th>GP</th>
+        <th>W</th>
+        <th>T</th>
+        <th>L</th>
+        <th>GAA</th>
+        <th>SVS%</th>
       </tr>
     </thead>
 );

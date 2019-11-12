@@ -10,11 +10,11 @@ const PlayersTableHead = () => (
         <th></th>
         <th>Nr</th>
         <th>Name</th>
-        <th>gp</th>
+        <th>GP</th>
         <th>+/-</th>
-        <th>a</th>
-        <th>g</th>
-        <th>tp</th>
+        <th>A</th>
+        <th>G</th>
+        <th>TP</th>
       </tr>
     </thead>
 );

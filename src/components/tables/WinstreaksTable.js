@@ -9,7 +9,7 @@ const WinstreaksTableHead = () => (
       <tr>
         <th></th>
         <th>Team</th>
-        <th>Current winstreak</th>
+        <th>Current</th>
       </tr>
     </thead>
 );
