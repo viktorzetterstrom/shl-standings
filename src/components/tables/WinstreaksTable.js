@@ -9,7 +9,9 @@ const WinstreaksTableHead = () => (
       <tr>
         <th></th>
         <th>Team</th>
-        <th>Current</th>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Both</th>
       </tr>
     </thead>
 );
@@ -18,7 +20,9 @@ const WinstreaksTableRow = ({ team }) => (
   <tr>
     <td><TeamLogo src={team.logo} name={team.name} /></td>
     <td>{team.name}</td>
-    <td>{team.winstreak}</td>
+    <td>{team.streaks.home}</td>
+    <td>{team.streaks.away}</td>
+    <td>{team.streaks.both}</td>
   </tr>
 );
 
