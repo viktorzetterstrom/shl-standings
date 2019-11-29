@@ -1,6 +1,6 @@
 
 const apiUrl = process.env.NODE_ENV === 'development'
-  ? 'http://localhost:4000'
+  ? 'http://localhost:4000/shl'
   : 'https://api.zetterstrom.dev/shl';
 
 const shlService = {
