@@ -1,7 +1,7 @@
 
 const apiUrl = process.env.NODE_ENV === 'development'
   ? 'http://localhost:5000'
-  : 'https://api.zetterstrom.dev';
+  : 'https://api.zetterstrom.dev/shl';
 
 const shlService = {
   standings: () => fetch(`${apiUrl}/standings`).then(res => res.json()),
