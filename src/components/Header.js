@@ -30,7 +30,7 @@ export default function Headers({ theme }) {
   return (
     <>
       <HeaderWrapper {...theme}>
-        SHL 2019
+        SHL 19/20
       </HeaderWrapper>
       <HeaderWrapper {...theme}>
         <HeaderLink {...theme} to="/standings">Standings</HeaderLink>
